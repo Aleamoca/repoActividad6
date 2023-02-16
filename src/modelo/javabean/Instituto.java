@@ -14,6 +14,7 @@ public class Instituto implements InstitutoDao {
 
 	public Instituto() {
 		this.personas = new ArrayList<Persona>();
+		this.cargarDatos();
 	}
 
 	// Agregamos a una persona a la lista de personas
@@ -70,4 +71,22 @@ public class Instituto implements InstitutoDao {
 		return resultado;
 	}
 	
+	private void cargarDatos() {
+		//Indicamos que tipo de lista utilizaremos, se inicializa porque si no estaria apuntanto a null y no permitiria la utilizacion de metodos como el "add"
+		this.personas = new ArrayList<Persona>();
+		//Creamos 5 Personas : 1 administrativo , 2 profesores y 2 alumnos:
+		Administrativo administrativo1 = new Administrativo("46578526P", "Carla Lopez", "Av Olimpica 54, Madrid", "988564574", "hacer matricula, controlar asistencia");
+		Profesor profesor1 = new Profesor("13465987G", "Carlos Perez", "C/ San Miguel Yuste 17, Madrid", "164852349", "Matematicas, Digital");
+		Profesor profesor2 = new Profesor("54876214H", "Jose Gomez", "C/ Kalea 11, Madrid", "456238778", "Programacion, Fisica Elemental");
+		Alumno alumno1 = new Alumno("46578954F", "Anthony Moncada", "C/ San Romualdo 26, Madrid", "614258976", "Matematicas");
+		Alumno alumno2 = new Alumno("46579875Y", "Denis Hernandez", "C/ Cortes 4, Madrid", "696578988", "Programacion");
+		
+		//Añadimos cada una de ella a la lista de Personas:		
+		this.personas.add(administrativo1);
+		this.personas.add(profesor1);
+		this.personas.add(profesor2);
+		this.personas.add(alumno1);
+		this.personas.add(alumno2);
+		
+	}
 }
