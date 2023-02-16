@@ -65,14 +65,14 @@ public abstract class Persona {
 	/*
 	 * Se declara el metodo con dependecia "llamar"
 	 */
-	public void llamar(Persona p) {
-		System.out.println(this.nombre + " está llamando a  " + p.getNombre());
+	public String llamar(Persona p) {
+		return this.nombre + " está llamando a  " + p.getNombre();
 	}
 	
 	/*
 	 * Se declara el metodo abstracto trabajar
 	 */
-	public abstract void trabajar();
+	public abstract String trabajar();
 	
 	/*
 	 * Se redefinen los metodos de Object

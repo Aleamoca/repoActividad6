@@ -50,14 +50,14 @@ public class Alumno extends Persona {
 	 * Se define la llamada al metodo heredado 
 	 */
 	@Override
-	public void trabajar() {
-		System.out.println("El alumno " + this.getNombre() + " va a hacer su examen");		
+	public String trabajar() {
+		return "El alumno " + this.getNombre() + " va a hacer su examen";
 	}
 	
 	/*
 	 * Se define el metodo propio "hacerExamen"
 	 */
-	public void hacerExamen() {
-		System.out.println("El alumno " + this.getNombre() + " va a estudiar para el curso " + this.curso);
+	public String hacerExamen() {
+		return "El alumno " + this.getNombre() + " va a estudiar para el curso " + this.curso;
 	}
 }

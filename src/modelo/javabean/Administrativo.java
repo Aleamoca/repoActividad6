@@ -49,15 +49,15 @@ public class Administrativo extends Persona {
 	 * Se define la llamada al metodo heredado 
 	 */
 	@Override
-	public void trabajar() {
-		System.out.println("El administrativo " + this.getNombre() + " va a realizar estas tareas:"
-        		+ tareas);	
+	public String trabajar() {
+		return "El administrativo " + this.getNombre() + " va a realizar estas tareas:"
+        		+ tareas;
 	}
 	
 	/*
 	 * Se define el metodo propio "gestionarMatricula"
 	 */
-	public void gestionarMatricula() {
-		System.out.println("El administrativo" + this.getNombre() + "va a gestionar una matrícula");
+	public String gestionarMatricula() {
+		return "El administrativo" + this.getNombre() + "va a gestionar una matrícula";
 	}	
 }

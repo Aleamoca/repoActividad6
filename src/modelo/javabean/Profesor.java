@@ -48,13 +48,13 @@ public class Profesor extends Persona {
 	 * Se define la llamada al metodo heredado 
 	 */
 	@Override
-	public void trabajar() {
-		System.out.println("El profesor " + getNombre() + " va a impartir su clase");
+	public String trabajar() {
+		return "El profesor " + getNombre() + " va a impartir su clase";
 	}
 	/*
 	 * Se define el metodo propio "ponerNotas"
 	 */
-	public void ponerNotas() {
-		System.out.println("El profesor " + this.getNombre() + " va a corregir los exámenes");
+	public String ponerNotas() {
+		return "El profesor " + this.getNombre() + " va a corregir los exámenes";
 	}	
 }

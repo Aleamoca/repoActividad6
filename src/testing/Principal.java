@@ -20,21 +20,21 @@ public class Principal {
 			
 			
 			for (Persona pers:persona) {
-				System.out.println(pers.toString());
-				pers.trabajar();
+				System.out.println(pers);
+				System.out.println(pers.trabajar());
 				
 			}
 			System.out.println("\n");
-			alumno1.llamar(profe1);
+			System.out.println(alumno1.llamar(profe1));
 			System.out.println("\n");
 				
 			for (Persona pers:persona) {
 				if (pers instanceof Profesor) {
-					((Profesor)pers).ponerNotas();
+					System.out.println(((Profesor)pers).ponerNotas());
 				}else if (pers instanceof Alumno) {
-					((Alumno)pers).hacerExamen(); 
+					System.out.println(((Alumno)pers).hacerExamen());
 				}else if (pers instanceof Administrativo) {
-					((Administrativo)pers).gestionarMatricula();
+					System.out.println(((Administrativo)pers).gestionarMatricula());
 				}   
 			
 			}
