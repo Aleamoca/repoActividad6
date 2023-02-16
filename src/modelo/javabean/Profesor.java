@@ -38,23 +38,23 @@ public class Profesor extends Persona {
 	 */
 	@Override
 	public String toString() {
-		return "Profesor [competencias=" + competencias + "]";
+		return "Profesor " + super.toString() + "]" + "Competencias:" + competencias;
 	}
 	/*
 	 * Se crea el objeto de clase Persona
 	 */
-	Profesor p1 = new Profesor(getNif(), getNombre(), getDireccion(), getTelefono(), competencias);
+	/*Profesor p1 = new Profesor(getNif(), getNombre(), getDireccion(), getTelefono(), competencias);
 	/*
 	 * Se define la llamada al metodo heredado 
 	 */
 	@Override
 	public void trabajar() {
-		System.out.printf("El profesor %s va a impartir su clase\n" ,p1.getNombre());
+		System.out.println("El profesor " + getNombre() + " va a impartir su clase");
 	}
 	/*
 	 * Se define el metodo propio "ponerNotas"
 	 */
 	public void ponerNotas() {
-		System.out.printf("El profesor %s va a corregir los exámenes\n" ,p1.getNombre());
+		System.out.println("El profesor " + this.getNombre() + " va a corregir los exámenes");
 	}	
 }

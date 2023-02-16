@@ -36,14 +36,14 @@ public class Alumno extends Persona {
 	/*
 	 * Se crea el objeto de clase Alumno
 	 */
-	Alumno a1 = new Alumno(getNif(), getNombre(), getDireccion(), getTelefono(), curso);
+	/*Alumno a1 = new Alumno(getNif(), getNombre(), getDireccion(), getTelefono(), curso);
 	
 	/*
 	 * Se redefinen los metodos de Object
 	 */
 	@Override
 	public String toString() {
-		return "Alumno [curso=" + curso + "]";
+		return  "Alumno " + super.toString() + "]" + "cursando:" + curso;
 	}
 	
 	/*
@@ -51,13 +51,13 @@ public class Alumno extends Persona {
 	 */
 	@Override
 	public void trabajar() {
-		System.out.printf("El alumno %s va a estudiar para el curso %s\n" ,a1.getNombre(),curso);		
+		System.out.println("El alumno " + this.getNombre() + " va a hacer su examen");		
 	}
 	
 	/*
 	 * Se define el metodo propio "hacerExamen"
 	 */
 	public void hacerExamen() {
-		System.out.printf("El alumno %s va a hacer su examen\n" ,a1.getNombre());
+		System.out.println("El alumno " + this.getNombre() + " va a estudiar para el curso " + this.curso);
 	}
 }

@@ -35,14 +35,14 @@ public class Administrativo extends Persona {
 	/*
 	 * Se crea el objeto de clase Administrativo
 	 */
-	Administrativo a1 = new Administrativo(getNif(), getNombre(), getDireccion(), getTelefono(), tareas);
+	/*Administrativo a1 = new Administrativo(getNif(), getNombre(), getDireccion(), getTelefono(), tareas);
 	
 	/*
 	 * Se redefinen los metodos de Object
 	 */
 	@Override
 	public String toString() {
-		return "Administrativo [tareas=" + tareas + "]";
+		return "Administrativo " + super.toString() + "]" + "Tareas:" + tareas;
 	}
 
 	/*
@@ -50,13 +50,14 @@ public class Administrativo extends Persona {
 	 */
 	@Override
 	public void trabajar() {
-		System.out.printf("El administrativo %s va a realizar estas tareas: %s\n" ,a1.getNombre(),tareas);	
+		System.out.println("El administrativo " + this.getNombre() + " va a realizar estas tareas:"
+        		+ tareas);	
 	}
 	
 	/*
 	 * Se define el metodo propio "gestionarMatricula"
 	 */
 	public void gestionarMatricula() {
-		System.out.printf("El administrativo %s va a gestionar una matrícula\n" ,a1.getNombre());
+		System.out.println("El administrativo" + this.getNombre() + "va a gestionar una matrícula");
 	}	
 }

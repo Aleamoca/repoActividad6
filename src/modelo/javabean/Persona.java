@@ -65,8 +65,8 @@ public abstract class Persona {
 	/*
 	 * Se declara el metodo con dependecia "llamar"
 	 */
-	public void llamar(Persona P) {
-		System.out.println("Juan Sanz llamando a " +nombre);
+	public void llamar(Persona p) {
+		System.out.println(this.nombre + " está llamando a  " + p.getNombre());
 	}
 	
 	/*
